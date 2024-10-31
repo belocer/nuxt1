@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: "nuxt"
+    image: postgres:16-alpine3.19
+    environment:
+      POSTGRES_DB: "nuxt"
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5430:5430"

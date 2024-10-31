@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxt/image": "^1.8.1",
+    "@pinia/nuxt": "^0.5.5",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
+    "bcrypt": "^5.1.1",
+    "dayjs-nuxt": "^2.1.11",
+    "drizzle-orm": "^0.36.0",
+    "multiformats": "^9.9.0",
+    "nuxt": "^3.13.2",
+    "nuxt-auth-utils": "^0.5.0",
+    "nuxt-typed-router": "^3.7.0",
+    "pinia": "^2.2.4",
+    "postgres": "^3.4.5",
+    "usebootstrap": "^3.5.99",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "drizzle-kit": "^0.27.0",
+    "nuxt-file-storage": "^0.2.8",
+    "prettier": "^3.3.3",
+    "sass": "1.77.6"
+  }
+}

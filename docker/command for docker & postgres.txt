@@ -1,0 +1,62 @@
+Вся работа с PostgreSQL осуществляется под пользователем postgres.
+sudo su postgres
+
+Запустить:
+docker-compose up -D
+
+Запустить docker desktop:
+systemctl --user start docker-desktop
+
+docker compose version
+docker --version
+docker version
+
+__________________________________________PostgreSQL
+Проверка подключения PostgreSQL:
+sudo systemctl status postgresql
+
+для запуска:
+sudo systemctl start postgresql
+
+Создание пользователя:
+sudo -u postgres psql
+
+CREATE USER root WITH PASSWORD 'root';
+
+Создать базу данных:
+CREATE DATABASE ваша_база_данных;
+CREATE DATABASE nuxt;
+
+Предоставить созданному пользователю права на управление созданной базой данных, нужно выполнить команду:
+GRANT ALL PRIVILEGES ON DATABASE ваша_база_данных TO ваш_пользователь;
+GRANT ALL PRIVILEGES ON DATABASE nuxt1 TO root;
+
+Выйти из интерактивной оболочки с помощью команды:
+\q
+
+
+Подключиться к PostgreSQL:
+psql -U ваш_пользователь -d ваша_база_данных -h 127.0.0.1 -p 5432
+psql -U root -d nuxt -h 127.0.0.1 -p 5432
+
+удалить бд:
+DROP TABLE employees;
+
+вставить
+INSERT INTO employees (name, salary) VALUES
+    ('Иван Иванов', 50000.00),
+    ('Петр Петров', 60000.00),
+    ('Антон Антонов', 75000.00);
+
+Запрос к бд:
+SELECT name, salary FROM employees WHERE salary > 60000;
+
+Показать все БД:
+SELECT datname FROM pg_database;
+
+СОЗДАТЬ ПОЛЬЗОВАТЕЛЯ И БД
+sudo -u postgres psql
+CREATE DATABASE nuxt1;
+CREATE USER root1 WITH PASSWORD 'root1';
+
+__________________________________________PostgreSQL
